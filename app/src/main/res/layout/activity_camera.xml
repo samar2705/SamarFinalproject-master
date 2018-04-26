@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="comsdwecv.example.hp1.finalproject.CameraActivity"
+    android:weightSum="1">
+
+
+    <TextView
+        android:text="You can change your profile:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:textSize="20sp"
+        android:layout_weight="0.04" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:id="@+id/imageView" />
+
+
+    <Button
+        android:text="Take Photo"
+        style="@style/button_style2"
+        android:id="@+id/btcamera" />
+
+    <Button
+        android:text="Choose Photo"
+        style="@style/button_style2"
+        android:id="@+id/btGalery" />
+
+
+</LinearLayout>

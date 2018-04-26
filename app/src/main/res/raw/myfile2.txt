@@ -1,0 +1,5 @@
+What is the maximum freight height (from the road's surface) that may be carried by a commerical cehilce with an all up weight of up to 3,500kg?
+3.0 metters.
+3.5 metters.
+4.0 metters.
+2.5 metters.

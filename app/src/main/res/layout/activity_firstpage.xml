@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_firstpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background6"
+    tools:context="comsdwecv.example.hp1.finalproject.Firstpage"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|end"
+        android:layout_marginTop="175dp">
+
+        <Button
+            android:text="sign up"
+            style="@style/button_style2"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/signup"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Log in"
+            style="@style/button_style2"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/login"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
