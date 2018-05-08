@@ -70,8 +70,7 @@ public class
                 builder.create().show();
 
                 break;
-            case R.id.settings:
-                break;
+
             case R.id.profile:
                 Intent i7=new Intent(this,CameraActivity.class);
                 startActivity(i7);

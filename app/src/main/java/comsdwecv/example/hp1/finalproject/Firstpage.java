@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Firstpage extends AppCompatActivity implements View.OnClickListener,DialogInterface.OnClickListener {
-    Button login, signup;
+    Button login;
     TextView thoery;
     Intent i1;
 
@@ -21,12 +21,10 @@ public class Firstpage extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstpage);
-
         login = (Button) findViewById(R.id.login);
-        signup = (Button) findViewById(R.id.signup);
         login.setOnClickListener(this);
-        signup.setOnClickListener(this);
-        i1 = new Intent(this, Signup.class);
+
+
 
     }
     @Override
@@ -34,9 +32,7 @@ public class Firstpage extends AppCompatActivity implements View.OnClickListener
         if (v == login) {
             Intent i = new Intent(this, Login.class);
             startActivity(i);
-        }else{
 
-            startActivity(i1);
         }
 
     }
@@ -88,8 +84,7 @@ public class Firstpage extends AppCompatActivity implements View.OnClickListener
                 builder.create().show();
 
                 break;
-            case R.id.settings:
-                break;
+
             case R.id.profile:
                 Intent i7=new Intent(this,CameraActivity.class);
                 startActivity(i7);

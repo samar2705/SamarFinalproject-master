@@ -98,7 +98,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
 
-        String filePath = root.getAbsolutePath()+"/DCIM/Camera/IMG_"+timeStamp+".jpg";
+        String filePath = root.getAbsolutePath()+"/IMG_"+timeStamp+".jpg";
         File file = new File(filePath);// determinig the type of the file and its place.
 
         SharedPreferences.Editor editor=pref.edit();
