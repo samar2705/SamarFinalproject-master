@@ -29,16 +29,9 @@ public class Tests extends AppCompatActivity implements View.OnClickListener,Ada
     BufferedReader br;
     int index=0;
     DBHandling db;
-    TextView tvQuestion;
-    ListView lsquestions;
 
     ArrayAdapter<Question> adapter;
-            //parameters for file reading used in both methods
-    String temp="", all="";
-    int num;
-
     ListView lvQuestions;
-    ArrayList<String> arrQuestions = new ArrayList<String>();
     ArrayList<Question> arrQuestion = new ArrayList<Question>();
 
     @Override
@@ -59,30 +52,7 @@ public class Tests extends AppCompatActivity implements View.OnClickListener,Ada
 
     }
 
-    public void readFile()
-    {
-        try{
-            temp="";
-            all="";
-            //4. open the file for reading
-            is=getResources().openRawResource(R.raw.myfile2);
-            //open a channel for file reading
-            in= new InputStreamReader(is);
-            br= new BufferedReader(in);
-            //while end of file not reached
-            //readline() reads one line at a time
-            while((temp=br.readLine())!=null) {
-                all += temp + "\n";//concatinate all lines to a string
-                arrQuestions.add(temp);
-            }
 
-            is.close();//file close
-        }catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     @Override
     public void onClick(View v) {
 

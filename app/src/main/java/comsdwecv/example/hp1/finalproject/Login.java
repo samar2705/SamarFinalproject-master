@@ -1,5 +1,7 @@
 package comsdwecv.example.hp1.finalproject;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -24,6 +26,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Calendar;
+
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -37,6 +41,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
 
         login1 = (Button) findViewById(R.id.login1);
         login1.setOnClickListener(this);
@@ -149,7 +154,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-    @Override
+
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu1, menu);

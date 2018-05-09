@@ -1,5 +1,7 @@
 package comsdwecv.example.hp1.finalproject;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Calendar;
+
 public class
     Home extends AppCompatActivity implements View.OnClickListener{
     Button exercise,test;
@@ -18,6 +22,9 @@ public class
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        setNotification();
+
         exercise= (Button) findViewById(R.id.exercise);
         test= (Button) findViewById(R.id.test);
         exercise.setOnClickListener(this);
@@ -77,6 +84,22 @@ public class
 
         }
         return super.onOptionsItemSelected(item);
-    }}
+    }
+    public void setNotification() {//delay is after how much time(in millis) from current time you want to schedule the notification
+
+        Intent intent1 = new Intent(Home.this, Notifacation.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(Home.this, 0, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager am = (AlarmManager) Home.this.getSystemService(Home.this.ALARM_SERVICE);
+
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 2);
+        calendar.set(Calendar.MINUTE, 15);
+        calendar.set(Calendar.SECOND, 0);
+        am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 5000, pendingIntent);
+
+
+    }
+}
 
 
